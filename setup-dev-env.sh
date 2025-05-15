@@ -8,7 +8,7 @@ set -e
 #   ./setup-dev-env.sh /ruta/al/proyecto [--update]
 # ─────────────────────────────────────────────────────────────
 
-TEMPLATE_REPO="https://github.com/JairoDev/esp32-dev-env.git"
+TEMPLATE_REPO="https://github.com/PoleG97/esp32-dev-env.git"
 TEMP_DIR=".tmp-dev-env"
 TARGETS=(".devcontainer" ".vscode")
 
