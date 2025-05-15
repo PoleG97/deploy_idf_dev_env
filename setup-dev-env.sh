@@ -9,7 +9,6 @@ set -e
 # ─────────────────────────────────────────────────────────────
 
 TEMPLATE_REPO="https://github.com/JairoDev/esp32-dev-env.git"
-TEMPLATE_BRANCH="main"
 TEMP_DIR=".tmp-dev-env"
 TARGETS=(".devcontainer" ".vscode")
 
@@ -45,8 +44,8 @@ if [[ "$MODE" == "update" ]]; then
     done
 fi
 
-echo "📥 Clonando plantilla desde $TEMPLATE_REPO..."
-git clone --depth 1 --branch "$TEMPLATE_BRANCH" "$TEMPLATE_REPO" "$TEMP_DIR"
+echo "📥 Clonando plantilla completa desde $TEMPLATE_REPO..."
+git clone "$TEMPLATE_REPO" "$TEMP_DIR"
 
 for dir in "${TARGETS[@]}"; do
     echo "📦 Copiando $dir a $PROJECT_PATH..."
